@@ -30,6 +30,11 @@ class SupplierController extends Controller
         return SupplierService::update($request, $id);
     }
 
+    public function consultCnpj($cnpj)
+    {
+        return SupplierService::verifyDocument($cnpj);
+    }
+
 
     public function destroy($id)
     {

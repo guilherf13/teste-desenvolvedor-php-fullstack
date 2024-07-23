@@ -9,5 +9,6 @@ Route::post('/supplier', [SupplierController::class, 'store']);
 Route::get('/supplier/{id}', [SupplierController::class, 'show']);
 Route::put('/supplier/{id}', [SupplierController::class, 'update']);
 Route::delete('/supplier/{id}', [SupplierController::class, 'destroy']);
+Route::get('/supplier-cnpj/{cnpj}', [SupplierController::class, 'consultCnpj']);
 
 
