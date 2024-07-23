@@ -32,7 +32,7 @@ class SupplierController extends Controller
 
     public function consultCnpj($cnpj)
     {
-        return SupplierService::verifyDocument($cnpj);
+        return SupplierService::verifyCNPJ($cnpj);
     }
 
 

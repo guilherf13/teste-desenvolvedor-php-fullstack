@@ -100,4 +100,20 @@ class SupplierService
         }
 
     }
+
+    public static function verifyCNPJ($document)
+    {
+        try {
+            $urlBrasil = 'https://brasilapi.com.br/api/cnpj/v1/';
+            $response = Http::get($urlBrasil . $document);
+            if($response->successful()) {
+                return $response->json();
+            }else{
+                return 'No Exist';
+            }
+        }catch (\Exception $e){
+            return Controller::mensager(Controller::ERROR, $e->getMessage());
+        }
+
+    }
 }
