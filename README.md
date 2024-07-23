@@ -85,9 +85,14 @@ $ docker exec app composer install
 ## Configuração do .env
 ```bash
 DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3300
+DB_HOST=db
+DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=root
+```
+## Criar a key e Rodar as migrations
+```bash
+$ docker exec app php artisan key:generate
+$ docker exec app php artisan migrate
 ```

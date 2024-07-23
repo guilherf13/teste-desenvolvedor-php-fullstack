@@ -41,7 +41,7 @@ services:
             - ./.docker/mysql/dbdata:/var/lib/mysql
         container_name: db
         ports:
-            - "3300:3306"
+            - "3306:3306"
         networks:
             - laravel
 
